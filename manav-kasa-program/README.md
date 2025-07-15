@@ -19,6 +19,7 @@ Alınan miktar ile ürünün kilogram fiyatı çarpılır.
 Tüm ürünlerin fiyatları toplanarak toplam tutar hesaplanır.
 
 Örnek Çalışma
+
 Armut kaç kilo? 2  
 Elma kaç kilo? 1.5  
 Muz kaç kilo? 1  
