@@ -23,4 +23,5 @@ Bu Java uygulaması, kullanıcıdan alınan yılın artık yıl olup olmadığı
 
 ## 🎯 Örnek Çalıştırma
 Yıl giriniz: 2024
+
 2024 bir artık yıldır.
