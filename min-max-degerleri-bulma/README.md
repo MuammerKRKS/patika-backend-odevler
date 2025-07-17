@@ -1,55 +1,80 @@
-3 ve 4'e Tam Bölünen Sayıların Ortalamasını Hesaplama Programı
-
+Kullanıcıdan Girilen Sayılar Arasından En Büyük ve En Küçük Sayıyı Bulan Program
 📋 Ödev Açıklaması
-Bu Java programı, kullanıcıdan pozitif bir sayı alarak
-0'dan girilen sayıya kadar olan sayıların içinde
-hem 3'e hem de 4'e tam bölünen sayıların ortalamasını hesaplar.
+Bu Java programı, kullanıcıdan belirli sayıda sayı alarak
+bu sayılar arasından en küçük ve en büyük olanını bulur ve ekrana yazdırır.
 
 🛠️ Kullanılan Yöntemler
-Scanner sınıfı ile kullanıcıdan veri alma
+Scanner sınıfı ile kullanıcıdan sayı alma
 
-for döngüsü ile 1’den girilen sayıya kadar olan sayıları kontrol etme
+İlk girilen sayıyı başlangıç değeri olarak atama
 
-if kontrolü ile hem 3’e hem de 4’e bölünenleri bulma
+for döngüsü ile diğer sayıların girişini kontrol etme
 
-Bulunan sayıların toplamını ve adedini sayma
+Koşul ifadeleri (if) kullanarak karşılaştırma
 
-Ortalama hesaplama ve sonucu ekrana yazdırma
+Minimum ve maksimum değeri belirleme
+
 
 📄 Örnek Kod
-
-
 import java.util.Scanner;
 
-public class Main {
+public class MinMaxFinder {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Bir sayı giriniz: ");
+
+        System.out.println("Sayı adeti: ");
         int number = scanner.nextInt();
 
-        int total = 0;
-        int piece = 0;
+        System.out.println("Birinci Sayıyı Giriniz: ");
+        int num1 = scanner.nextInt();
 
-        for (int i = 1; i <= number; i++) {
-            if (i % 3 == 0 && i % 4 == 0) {
-                total += i;
-                piece++;
+        int min = num1;
+        int max = num1;
+
+        for (int i = 2; i <= number; i++) {
+            System.out.println(i + ". sayıyı girin: ");
+            num1 = scanner.nextInt();
+
+            if (num1 < min) {
+                min = num1;
+            }
+            if (num1 > max) {
+                max = num1;
             }
         }
 
-        if (piece > 0) {
-            double average = (double) total / piece;
-            System.out.println("Ortalama: " + average);
-        } else {
-            System.out.println("3 ve 4'e tam bölünen sayı bulunamadı.");
-        }
+        System.out.println("Girilen En küçük sayı: " + min + " ve girilen En büyük sayı: " + max);
+        scanner.close();
     }
 }
 
 
+📝 Örnek Çalıştırma
+
+Sayı adeti:  
+4  
+Birinci Sayıyı Giriniz:  
+10  
+2. sayıyı girin:  
+5  
+3. sayıyı girin:  
+20  
+4. sayıyı girin:  
+8  
+Girilen En küçük sayı: 5 ve girilen En büyük sayı: 20  
+
+
+
+
+
+
 🎯 Amaç
-Döngüler ve koşullar konusunu pekiştirmek
+Döngülerle kullanıcıdan birden fazla veri almayı öğrenmek
 
-Temel aritmetik işlemleri pratik etmek
+Sayılar arasında karşılaştırma yapabilmek
 
-Java'da kullanıcıdan veri alma ve işlem yapma pratiği
+Min-max algoritmasıyla temel kontrol yapıları kullanmak
+
+
+
+
