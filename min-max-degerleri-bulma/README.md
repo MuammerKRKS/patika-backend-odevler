@@ -1,4 +1,5 @@
 3 ve 4'e Tam Bölünen Sayıların Ortalamasını Hesaplama Programı
+
 📋 Ödev Açıklaması
 Bu Java programı, kullanıcıdan pozitif bir sayı alarak
 0'dan girilen sayıya kadar olan sayıların içinde
