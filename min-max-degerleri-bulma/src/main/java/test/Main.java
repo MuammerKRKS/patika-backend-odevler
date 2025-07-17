@@ -5,28 +5,28 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Bir sayı giriniz: ");
+
+        System.out.println("Sayı adeti: ");
         int number = scanner.nextInt();
 
-        int total = 0;
-        int piece = 0;
+        System.out.println("Birinci Sayıyı Giriniz: ");
+        int num1= scanner.nextInt();
 
-        for (int i = 1; i <= number; i++)
-        {
-            if ( i % 3 == 0 && i % 4 == 0)
-            {
-                total += i;
-                piece++;
+        int min = num1;
+        int max = num1;
+
+        for (int i = 2; i <=number ; i++) {
+            System.out.println(i + " sayı girin: ");
+            num1= scanner.nextInt();
+
+            if(num1 < min){
+                min =num1;
+            }
+            if(num1 > max){
+                max=num1;
             }
         }
-if (piece > 0 )
-{
-    double average = (double) total / piece;
-    System.out.println("ortalama: " + average);
-} else {
-    System.out.println("3 ve 4'e tam bölünen sayı bulunamadı. ");
-}
-
-}
-
+        System.out.println("Girilen En küçük sayı: " + min + " ve girilen en büyük sayı: " + max );
+        scanner.close();
+    }
 }
