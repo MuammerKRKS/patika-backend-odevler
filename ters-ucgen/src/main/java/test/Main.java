@@ -1,5 +1,3 @@
-package test;
-
 import java.util.Scanner;
 
 public class Main {
@@ -8,18 +6,12 @@ public class Main {
 
         System.out.print("Basamak sayısı : ");
         int a = scanner.nextInt();
-        for (int i = a; i > 0; i--){
-            // boşlukları yazdır
-            for (int j = 0; j < a - i; j++){
-                System.out.print(" ");
+
+        for (int i = a; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                System.out.print("*");
             }
-                // yıldızları yazdır
-                    for (int k = 0; k < i; k++){
-                        System.out.print("*");
-                    }
-            System.out.println();
+            System.out.println(); // Satır atla
         }
-
-
     }
 }
